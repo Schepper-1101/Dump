@@ -1,6 +1,10 @@
 /.vscode/
+cmake-build-debug
 # ignore all executables
 *.out
 *.exe
 *.sh
 *.pie
+
+
+
