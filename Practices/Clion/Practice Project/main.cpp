@@ -30,4 +30,5 @@ int main()
         n = sum;
     }
     std::cout << "\n";
+
 }
