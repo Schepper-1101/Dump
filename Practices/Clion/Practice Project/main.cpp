@@ -30,6 +30,4 @@ int main()
         n = sum;
     }
     std::cout << "\n";
-
-    return 0;
 }
