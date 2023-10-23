@@ -13,6 +13,18 @@ void gotoxy(short x, short y) // This function is to move the cursor
     std::cout << "\033[" << x << ";" << y << "H";
 }
 
+/**
+ * This program demonstrates the implementation of a queue data structure using an array.
+ * 
+ * The program presents a menu to the user with three options:
+ * 1. Insert an element into the queue.
+ * 2. Delete an element from the queue.
+ * 3. Exit the program.
+ * 
+ * The queue is implemented using an array and the user's input is validated to ensure it is within the range of available options.
+ * 
+ * int The exit status of the program.
+ */
 int main()
 {
     Queue queue;
