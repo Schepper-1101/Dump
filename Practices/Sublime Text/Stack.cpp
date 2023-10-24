@@ -11,16 +11,28 @@ struct Stack
 
 void gotoxy(short x, short y) // This function is to move the cursor
 {
-    std::cout << "\033[" << x << ";" << y << "H";
+    std::cout << "\033[" << x << ";" << y << "H"; 
 }
 
+/**
+ * This program demonstrates the implementation of a stack using an array.
+ *
+ * The program uses the Stack class to create a stack and perform push and pop operations on it.
+ * The stack is displayed on the console using the gotoxy function to move the cursor.
+ * The user is prompted to enter a choice between push, pop, and exit operations.
+ * The program uses a do-while loop to check the input and a switch statement to perform the corresponding operation.
+ *
+ * int The exit status of the program.
+ */
 int main()
 {
-    Stack stack;
+    // Uniform Initialization
+    Stack stack{};
 up:
     system("clear"); // It will clear the screen
     while (1)
     {
+        // Using gotoxy function to move the cursor
         gotoxy(2, 6);
         std::cout << "+------------------------------------------+" << std::endl;
         gotoxy(3, 6);
@@ -59,16 +71,17 @@ up:
         std::cout << "+------------------------------------------+" << std::endl;
         gotoxy(15, 6);
         std::cout << "> ";
-
+        // Using do while loop to check the input
         int choice{0};
         do
         {
             if (choice != 0)
             {
+                // Using system function to clear the screen
                 system("clear");
                 std::cout << "Invalid Input. Please try again." << std::endl;
-                std::cin.ignore();
-                std::cin.get();
+                std::cin.ignore(); // To ignore the previous input
+                std::cin.get();    // To get the new input
                 goto up;
             }
             std::cin >> choice;
@@ -77,7 +90,7 @@ up:
         switch (choice)
         {
         case 1:
-        {
+        { // Using block to define the scope of the variable
             int num{};
             std::cout << "Enter the number: ";
             std::cin >> num;
@@ -95,7 +108,7 @@ up:
     }
 }
 
-void Stack::push(const int &num)
+void Stack::push(const int &num) // Using reference to avoid the copy of the variable
 {
     if (top < 4)
         arr[++top] = num;
@@ -107,7 +120,7 @@ void Stack::push(const int &num)
     }
 }
 
-void Stack::pop()
+void Stack::pop() // Function to delete
 {
     if (top >= 0)
         arr[top--] = INT_MAX;
