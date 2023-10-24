@@ -27,7 +27,7 @@ void gotoxy(short x, short y) // This function is to move the cursor
  */
 int main()
 {
-    Queue queue;
+    Queue queue{}; // Uniform Initialization
 up:
     system("clear"); // It will clear the screen
     while (1)
@@ -73,7 +73,7 @@ up:
 
         int choice{0};
         do
-        {
+        {// Using do while loop to check the input
             if (choice != 0)
             {
                 system("clear");
@@ -88,7 +88,7 @@ up:
         switch (choice)
         {
         case 1:
-        {
+        {// Using block to declare variable
             int num{};
             std::cout << "Enter the number: ";
             std::cin >> num;
@@ -106,7 +106,7 @@ up:
     }
 }
 
-void Queue::_insert(const int &num)
+void Queue::_insert(const int &num) // Function to input
 {
     if (front <= rear && rear < 4)
     {
@@ -124,7 +124,7 @@ void Queue::_insert(const int &num)
     }
 }
 
-void Queue::_delete()
+void Queue::_delete() // Function to delete
 {
     if (front > -1 && front <= rear)
         arr[front++] = INT_MAX;
