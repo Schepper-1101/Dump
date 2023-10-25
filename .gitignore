@@ -5,6 +5,7 @@ cmake-build-debug
 *.exe
 *.sh
 *.pie
+practice.cpp
 
 
 
