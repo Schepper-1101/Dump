@@ -6,6 +6,3 @@ cmake-build-debug
 *.sh
 *.pie
 practice.cpp
-
-
-
