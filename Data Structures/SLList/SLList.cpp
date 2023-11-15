@@ -325,7 +325,7 @@ void SLList::deleteNode(int num)
 
 	Node *curr = head, *prev = nullptr;
 	bool _isFound = false;
-	while(curr != nullptr)
+	while(curr)
 	{
 		if(num = curr->data)
 		{
@@ -372,7 +372,7 @@ bool SLList::isInList(int num)
 
 	Node *curr = head, *prev = nullptr;
 	bool _isFound = false;
-	for(;curr != nullptr;)
+	while(curr)
 	{
 		if(num == curr->data)
 		{

@@ -31,7 +31,8 @@ public:
 	}
 	~SLList()
 	{
-		for(Node *temp; head != nullptr;)
+	   Node *temp;
+		while(head)
 		{
 			temp = head->next;
 			delete head;
